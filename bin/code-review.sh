@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Would you like to submit this change for review? (y/n)"
 read send_to_phabricator
@@ -39,7 +39,7 @@ case $send_to_phabricator in
     cmd="ruby -e 'require \"rubygems\"; require \"json/pure\"; puts JSON(%Q[${response}])[%Q[response]].reject{|user| user[%Q[userName]] == %Q[${me}]}.collect{|user| user[%Q[userName]]}.join(%Q[,])'"
     eval response=\`${cmd}\`
 
-    arc diff --reviewers $response "$@"
+    arc diff --reviewers $response --skip-binaries "$@"
     status=$?
     ;;
 esac
