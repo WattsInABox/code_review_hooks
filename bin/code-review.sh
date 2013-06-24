@@ -13,7 +13,7 @@ phabricator_repo=$(sed 's/[0-9]*//g'<<<$repo)
 phabricator_repo="`echo $phabricator_repo|tr '[a-z]' '[A-Z]'`"
 
 # get the revision id if there is one
-revision_id=`arc which | grep -o '   D[0-9]\{1,100\} ' | grep -o '[0-9]\{1,100\}'`
+revision_id=`arc which ${BASH_ARGV[0]} | grep -o '   D[0-9]\{1,100\} ' | grep -o '[0-9]\{1,100\}'`
 
 # set the reviewers
 
