@@ -9,7 +9,7 @@ else
 fi
 
 # phabricator must be uppercase letters only
-phabricator_repo=$(sed 's/[0-9]*//g'<<<$repo)
+phabricator_repo=$(sed 's/[0-9\-]*//g'<<<$repo)
 phabricator_repo="`echo $phabricator_repo|tr '[a-z]' '[A-Z]'`"
 
 # get the revision id if there is one
