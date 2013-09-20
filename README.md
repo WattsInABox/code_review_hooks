@@ -1,24 +1,24 @@
-# .
+## Description
 
-TODO: Write a gem description
+Easily code review your git-backed ruby projects with phabricator using this gem
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem '.'
+    gem 'code_review_hooks', github: 'adsummos/code_review_hooks'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install .
-
 ## Usage
 
-TODO: Write usage instructions here
+code-review PARENT_BRANCH_NAME
+
+ex:
+
+code-review origin/master
 
 ## Contributing
 
